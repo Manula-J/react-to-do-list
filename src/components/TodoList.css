@@ -1,0 +1,53 @@
+h1 {
+ text-align: center;
+ font-size: 40px;
+}
+
+.add-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+input {
+  width: 30vw;
+  padding: 8px 15px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  margin-right: 15px;
+}
+
+.btn-add-task {
+  padding: 8px 8px;
+  border: 1px solid #000;
+  background-color: #f0f0f0;
+  transition: 0.4s;
+}
+
+.btn-add-task:hover {
+  background-color: #c6c6c6;
+}
+
+.task-item {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin: 30px 10vw;
+  list-style-type: none;
+}
+
+.btn-delete {
+  width: 70px;
+  height: 25px;
+  text-align: center;
+  background-color: #ff6262;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-delete:hover {
+  background-color: #d80000;
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./TodoList.css";
 
 export default function TodoList() {
 
@@ -17,19 +18,21 @@ export default function TodoList() {
   }
 
   const handleDeleteTodo = (index) => {
-    const newTodos = todos.filter((_,i) => i != index);
+    const newTodos = todos.filter((_,i) => i !== index);
     setTodos(newTodos);
   }
 
   return (
     <div>
       <h1>To do List</h1>
-      <input type='text' value={input} onChange={handleInputChange} placeholder='Add a new task' />
-      <button onClick={handleAddTask}>Add Task</button>
+      <div className='add-task'>
+        <input type='text' value={input} onChange={handleInputChange} placeholder='Add a new task' />
+        <button className='btn-add-task' onClick={handleAddTask}>Add Task</button>
+      </div>
       <ul>
         {todos.map((todo, index) => (
-          <li key={index}>{todo}
-          <button onClick={() => handleDeleteTodo(index)}>Delete</button>
+          <li className='task-item' key={index}>{todo}
+          <button onClick={() => handleDeleteTodo(index)} className='btn-delete'>Delete</button>
           </li>
         ))}
       </ul>
