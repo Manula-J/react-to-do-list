@@ -19,11 +19,16 @@ input {
   margin-right: 15px;
 }
 
+.due-date-input {
+  width: 15vw;
+}
+
 .btn-add-task {
   padding: 8px 8px;
   border: 1px solid #000;
   background-color: #f0f0f0;
   transition: 0.4s;
+  border-radius: 10px;
 }
 
 .btn-add-task:hover {
@@ -32,12 +37,17 @@ input {
 
 .task-item {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 80% 20%;
   margin: 30px 10vw;
   list-style-type: none;
+  background-color: #8b8b8b9d;
+  padding: 20px;
+  border-radius: 20px;
+  padding-left: 30px;
 }
 
 .btn-delete {
+  justify-self: center;
   width: 70px;
   height: 25px;
   text-align: center;
@@ -50,4 +60,17 @@ input {
 
 .btn-delete:hover {
   background-color: #d80000;
+}
+
+.task-details {
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+
+.task-name {
+
+}
+
+.task-due {
+  text-align: right;
 }
